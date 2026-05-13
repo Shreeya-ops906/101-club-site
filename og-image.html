@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,300;1,9..144,400&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background: #1a1a1a;
+    font-family: 'Fraunces', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    width: 1200px; height: 630px;
+    padding: 72px 80px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .top {
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px; letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245, 243, 238, 0.45);
+  }
+  .middle { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .wordmark {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 180px; font-weight: 400; line-height: 0.9;
+    letter-spacing: -6px; color: #f5f3ee;
+  }
+  .wordmark em {
+    font-style: italic; font-weight: 300;
+    color: rgba(245, 243, 238, 0.5);
+  }
+  .tagline {
+    margin-top: 40px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 28px; font-weight: 400; font-style: italic;
+    color: rgba(245, 243, 238, 0.65);
+    letter-spacing: -0.5px;
+  }
+  .bottom {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-top: 1px solid rgba(245, 243, 238, 0.14);
+    padding-top: 28px;
+  }
+  .domain {
+    font-family: 'Geist Mono', monospace;
+    font-size: 14px; letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(245, 243, 238, 0.35);
+  }
+  .badge {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(245, 243, 238, 0.35);
+    border: 1px solid rgba(245, 243, 238, 0.18);
+    padding: 8px 16px; border-radius: 100px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">Private · UK Founders · Application Only</div>
+  <div class="middle">
+    <div class="wordmark">101<em>%</em><br><em>club</em></div>
+    <div class="tagline">A private club for the 1% extra that compounds.</div>
+  </div>
+  <div class="bottom">
+    <div class="domain">101club.it.com</div>
+    <div class="badge">Now accepting founding members</div>
+  </div>
+</div>
+</body>
+</html>
