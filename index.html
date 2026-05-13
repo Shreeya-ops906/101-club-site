@@ -33,7 +33,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -48,10 +48,11 @@
     --line-strong: rgba(245, 243, 238, 0.28);
     --serif: 'Fraunces', Georgia, serif;
     --sans: 'Geist', -apple-system, sans-serif;
-    --mono: 'Geist Mono', monospace;
+    --mono: 'Geist', -apple-system, sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  em { font-style: normal; }
   html { scroll-behavior: smooth; }
   body {
     font-family: var(--sans);
@@ -88,7 +89,7 @@
     color: var(--off-white); text-decoration: none;
   }
   .logo .pct { font-size: 14px; vertical-align: super; font-weight: 400; }
-  .logo .club { font-style: italic; font-weight: 400; margin-left: 6px; }
+  .logo .club { font-weight: 400; margin-left: 6px; }
   .nav-links { display: flex; gap: 40px; align-items: center; font-size: 14px; font-weight: 400; }
   .nav-links a { color: var(--off-white); text-decoration: none; transition: opacity 0.2s ease; }
   .nav-links a:hover { opacity: 0.6; }
@@ -339,12 +340,12 @@
   }
   .guarantee-mark {
     font-family: var(--serif); font-size: 48px;
-    font-style: italic; font-weight: 400; line-height: 1;
+    font-weight: 400; line-height: 1;
     text-align: center; color: var(--off-white);
   }
   .guarantee-text strong {
     font-family: var(--serif); font-size: 18px;
-    font-weight: 400; font-style: italic;
+    font-weight: 400;
     display: block; margin-bottom: 6px;
   }
   .guarantee-text p { font-size: 14px; color: var(--off-white-mute); line-height: 1.5; }
@@ -404,7 +405,7 @@
   .form-success.active { display: block; }
   .form-success-mark {
     font-family: var(--serif); font-size: 64px;
-    font-style: italic; margin-bottom: 24px;
+    margin-bottom: 24px;
   }
   .form-success h3 {
     font-family: var(--serif); font-size: 32px; font-weight: 400;
@@ -525,9 +526,9 @@
       <span>Now accepting founding members · UK</span>
     </div>
     <h1>
-      <span class="line">A private club</span>
-      <span class="line">for the <em>1% extra</em></span>
-      <span class="line">that compounds.</span>
+      <span class="line">The private network</span>
+      <span class="line">for founders who know</span>
+      <span class="line">100% isn't enough.</span>
     </h1>
     <div class="hero-sub">
       <p>The 101% Club is a private community for ambitious UK founders. Every member is a potential client, a trusted advisor, and a peer who'll tell you the truth.</p>
