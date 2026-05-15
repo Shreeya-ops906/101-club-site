@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get set up — The 101% Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --charcoal: #1a1a1a;
+    --off-white: #f5f3ee;
+    --off-white-mute: rgba(245, 243, 238, 0.72);
+    --line: rgba(245, 243, 238, 0.14);
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Geist', -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--sans);
+    background: var(--charcoal);
+    color: var(--off-white);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px; font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--off-white);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 80px;
+  }
+
+  .label {
+    font-family: var(--sans);
+    font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--off-white-mute);
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .label::before { content: ""; width: 28px; height: 1px; background: var(--off-white); }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 400; line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+
+  .intro {
+    font-size: 17px; line-height: 1.6;
+    color: var(--off-white-mute);
+    margin-bottom: 64px;
+  }
+
+  form { display: grid; gap: 40px; }
+
+  .field { display: grid; gap: 10px; }
+
+  label {
+    font-size: 11px; letter-spacing: 0.15em;
+    text-transform: uppercase; font-weight: 500;
+    color: var(--off-white-mute);
+  }
+
+  input, select, textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(245, 243, 238, 0.2);
+    padding: 12px 0;
+    font-family: var(--sans);
+    font-size: 17px;
+    color: var(--off-white);
+    width: 100%;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-bottom-color: var(--off-white);
+  }
+  input::placeholder, textarea::placeholder { color: rgba(245, 243, 238, 0.25); }
+
+  select {
+    appearance: none; -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3e%3cpath d='M1 1L6 6L11 1' stroke='%23f5f3ee' stroke-width='1.2'/%3e%3c/svg%3e");
+    background-repeat: no-repeat; background-position: right 4px center;
+    cursor: pointer;
+  }
+  select option { background: var(--charcoal); color: var(--off-white); }
+
+  textarea { resize: vertical; min-height: 90px; line-height: 1.55; }
+
+  .field-hint {
+    font-size: 13px; color: rgba(245, 243, 238, 0.4); line-height: 1.5;
+  }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  @media (max-width: 560px) { .two { grid-template-columns: 1fr; } }
+
+  button[type="submit"] {
+    background: var(--off-white); color: var(--charcoal);
+    border: none; padding: 20px 40px; border-radius: 100px;
+    font-family: var(--sans); font-size: 15px; font-weight: 500;
+    cursor: pointer; justify-self: start; margin-top: 8px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  button[type="submit"]:hover { transform: translateY(-2px); opacity: 0.9; }
+
+  .success { display: none; text-align: center; padding: 80px 0; }
+  .success.active { display: block; }
+  .success-mark {
+    font-family: var(--serif); font-size: 64px;
+    font-weight: 400; margin-bottom: 28px;
+  }
+  .success h2 {
+    font-family: var(--serif); font-size: 36px;
+    font-weight: 400; letter-spacing: -0.02em; margin-bottom: 16px;
+  }
+  .success p {
+    font-size: 16px; color: var(--off-white-mute);
+    max-width: 440px; margin: 0 auto; line-height: 1.6;
+  }
+
+  .divider {
+    border: none; border-top: 1px solid var(--line);
+    margin: 8px 0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a href="/" class="logo">101% club</a>
+
+  <div class="label">Welcome</div>
+  <h1>Let's get you set up.</h1>
+  <p class="intro">You're now a founding member. This takes three minutes — it's how we make the right introductions and get you into the right mastermind group from day one.</p>
+
+  <form id="onboardingForm" action="https://formspree.io/f/YOUR_ONBOARDING_FORM_ID" method="POST" novalidate>
+    <input type="hidden" name="_subject" value="New 101% Club member onboarding" />
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+    <div class="two">
+      <div class="field">
+        <label for="fname">First name</label>
+        <input type="text" id="fname" name="fname" required />
+      </div>
+      <div class="field">
+        <label for="lname">Last name</label>
+        <input type="text" id="lname" name="lname" required />
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="field">
+        <label for="company">Business name</label>
+        <input type="text" id="company" name="company" required />
+      </div>
+      <div class="field">
+        <label for="website">Website</label>
+        <input type="url" id="website" name="website" placeholder="https://" />
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="field">
+        <label for="sector">Sector</label>
+        <select id="sector" name="sector" required>
+          <option value="">Select your sector</option>
+          <option>Agency / consultancy</option>
+          <option>SaaS / software</option>
+          <option>E-commerce / DTC</option>
+          <option>Professional services</option>
+          <option>Trades / construction</option>
+          <option>Coaching / training</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="turnover">Annual turnover</label>
+        <select id="turnover" name="turnover" required>
+          <option value="">Select range</option>
+          <option>£0 – £100k</option>
+          <option>£100k – £500k</option>
+          <option>£500k – £2m</option>
+          <option>£2m – £10m</option>
+          <option>£10m+</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="linkedin">LinkedIn URL</label>
+      <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourname" />
+    </div>
+
+    <hr class="divider" />
+
+    <div class="field">
+      <label for="ideal">Who is your ideal client?</label>
+      <input type="text" id="ideal" name="ideal" placeholder="e.g. marketing directors at mid-sized e-commerce brands" required />
+      <span class="field-hint">Be specific — this is how other members will refer to you.</span>
+    </div>
+
+    <div class="field">
+      <label for="offer">What do you sell?</label>
+      <input type="text" id="offer" name="offer" placeholder="e.g. paid media management for DTC brands" required />
+    </div>
+
+    <div class="field">
+      <label for="want">What do you most want from the club?</label>
+      <textarea id="want" name="want" placeholder="Referrals, accountability, peers, expertise — be honest." required></textarea>
+    </div>
+
+    <button type="submit">Submit and get started <span>→</span></button>
+  </form>
+
+  <div class="success" id="success">
+    <div class="success-mark">✓</div>
+    <h2>You're all set.</h2>
+    <p>We'll have you in the community space and matched to your first mastermind group within 24 hours. Keep an eye on your inbox.</p>
+  </div>
+
+</div>
+
+<script>
+  const form = document.getElementById('onboardingForm');
+  const success = document.getElementById('success');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    const btn = form.querySelector('button[type="submit"]');
+    const original = btn.innerHTML;
+    btn.innerHTML = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.classList.add('active');
+      } else {
+        alert('Something went wrong. Please email hello@101club.it.com directly.');
+        btn.innerHTML = original;
+        btn.disabled = false;
+      }
+    } catch {
+      alert('Something went wrong. Please email hello@101club.it.com directly.');
+      btn.innerHTML = original;
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
